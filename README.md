@@ -37,6 +37,9 @@ Repository includes nothing but main.rs and Cargo.toml – drop it into any cont
 
 ## wrk
 
+
+### rust:
+
 ```bash
 $ wrk -c 100 -d 10 -t 20 http://192.168.168.168:8888/json/1.2.3.4
 
@@ -48,4 +51,32 @@ Running 10s test @ http://192.168.168.168:8888/json/1.2.3.4
   2239852 requests in 10.10s, 459.26MB read
 Requests/sec: 221765.55
 Transfer/sec:     45.47MB
+```
+
+### cpp:
+
+```bash
+$ wrk -c 100 -d 10 -t 20 http://192.168.168.168:8888/json/1.2.3.4
+Running 10s test @ http://192.168.168.168:8888/json/1.2.3.4
+  20 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   394.92us  207.32us   8.87ms   90.79%
+    Req/Sec    12.52k   771.73    17.09k    80.08%
+  2513334 requests in 10.10s, 551.29MB read
+Requests/sec: 248848.79
+Transfer/sec:     54.58MB
+```
+
+### go:
+
+```bash
+$ wrk -c 100 -d 10 -t 20 http://192.168.168.168:8888/json/1.2.3.4
+Running 10s test @ http://192.168.168.168:8888/json/1.2.3.4
+  20 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.99ms  724.91us   8.56ms   74.66%
+    Req/Sec     5.50k   203.76     6.73k    68.48%
+  1103741 requests in 10.10s, 266.31MB read
+Requests/sec: 109285.27
+Transfer/sec:     26.37MB
 ```

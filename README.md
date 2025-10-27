@@ -37,6 +37,7 @@ Repository includes nothing but main.rs and Cargo.toml – drop it into any cont
 
 ## wrk
 
+In addition to the Rust implementation, C++ and Go implementations are also provided.
 
 ### rust:
 
